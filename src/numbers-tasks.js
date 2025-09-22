@@ -50,7 +50,9 @@ function getCircleCircumference(radius) {
  *  -3, 3  => 0
  */
 function getAverage(value1, value2) {
-  return (value1 + value2) / 2;
+  const sum = value1 + value2;
+  const average = sum / 2;
+  return average;
 }
 
 /**
@@ -551,8 +553,7 @@ function getSumOfNumbers(/* x1, x2, x3 */) {
  * 0, 5   => 5
  */
 function getMaxNumber(firstNumber, secondNumber) {
-  if (firstNumber > secondNumber) return firstNumber;
-  else return secondNumber
+  return firstNumber > secondNumber ? firstNumber : secondNumber;
 }
 
 /**
@@ -568,9 +569,9 @@ function getMaxNumber(firstNumber, secondNumber) {
  * -1, 1 => -1 | 0 | 1
  */
 function getRandomInteger(min, max) {
-  min = Math.ceil(min);
-  max = Math.floor(max);
-  return Math.floor(Math.random() * (max - min + 1)) + min;
+  const minRounded = Math.ceil(min);
+  const maxRounded = Math.floor(max);
+  return Math.floor(Math.random() * (maxRounded - minRounded + 1)) + minRounded;
 }
 
 /**
